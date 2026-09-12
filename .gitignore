@@ -1,0 +1,34 @@
+gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Данные и временные файлы
+data/*.csv
+*.log
+*.tmp
+
+# Результаты бэктестов
+backtest_result.png
+*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
