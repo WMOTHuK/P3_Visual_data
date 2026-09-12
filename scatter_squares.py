@@ -13,4 +13,5 @@ plt.axis([0, 1100, 0, 1200000])
 
 # Назначение размера шрифта делений на осях.
 plt.tick_params(axis='both', which='major', labelsize=14)
+plt.savefig('squares_plot.png', bbox_inches='tight')
 plt.show()
