@@ -1,5 +1,7 @@
 import pygal
+
 from die import Die
+
 die_sides = 3
 # Создание двух кубиков D6.
 die_1 = Die(die_sides)

@@ -1,6 +1,8 @@
+
 from random import choice
 
-class RandomWalk():
+
+class RandomWalk:
     """Класс для генерирования случайных блужданий."""
     def __init__(self, num_points=5000, dirx=1, diry=-1):
         """Инициализирует атрибуты блуждания."""

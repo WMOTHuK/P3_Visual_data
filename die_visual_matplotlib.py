@@ -1,5 +1,6 @@
-from die import Die
 import matplotlib.pyplot as plt
+
+from die import Die
 
 # Создание кубика D6.
 die = Die()

@@ -1,4 +1,6 @@
+
 import matplotlib.pyplot as plt
+
 from random_walk import RandomWalk
 
 # Новые блуждания строятся до тех пор, пока программа остается активной.

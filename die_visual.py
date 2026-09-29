@@ -1,5 +1,7 @@
-from die import Die
 import pygal
+
+from die import Die
+
 # Создание кубика D6.
 die = Die()
 # Моделирование серии бросков с сохранением результатов в списке.
