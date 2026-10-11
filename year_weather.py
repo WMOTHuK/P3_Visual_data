@@ -18,6 +18,9 @@ class Year_Weather:
         #Humidity
         self.h_highs, self.h_lows = [],[]
 
+        #Wind
+        self.w_highs = []
+
         #Errors
         self.errors = []
 
@@ -34,7 +37,8 @@ class Year_Weather:
                     high = int(row[1])
                     low = int(row[3])
                     h_high = int(row[7])
-                    h_low = int(row[9])    
+                    h_low = int(row[9])
+                    w_high = int(row[16])    
                 except ValueError:
                     self.errors.append((row[0], 'missing data'))
                 else:
@@ -43,3 +47,4 @@ class Year_Weather:
                     self.lows.append(low)
                     self.h_highs.append(h_high)
                     self.h_lows.append(h_low)
+                    self.w_highs.append(w_high)
