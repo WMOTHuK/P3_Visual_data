@@ -28,6 +28,8 @@ with open(filename) as f:
             dates.append(date) 
             lows.append(low)
 
+
+
 # Нанесение данных на диаграмму.
 fig = plt.figure(dpi=128, figsize=(10, 6))
 plt.plot(dates, highs, c='red', alpha=0.5 )
