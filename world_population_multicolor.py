@@ -1,6 +1,12 @@
 import json
 
+from pygal_maps_world.maps import World
+
 from country_codes import get_country_code
+
+#Создаём карту
+wm = World()
+wm.title = 'World population'
 
 # Список заполняется данными.
 filename = 'json_data/population_data.json'
@@ -13,6 +19,12 @@ with open(filename) as f:
             population = int(float(pop_dict['Value']))
             code = get_country_code(country_name)
             if code:
-                print(code + ": "+ str(population))
+                wm.add(country_name, {code: population})
+
             else:
                 print('ERROR - ' + country_name)
+
+wm.render_to_file('world_population_multicolor.svg')
+
+
+
