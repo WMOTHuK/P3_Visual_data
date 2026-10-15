@@ -1,12 +1,12 @@
 import json
 
+from pygal.style import LightColorizedStyle, RotateStyle
 from pygal_maps_world.maps import World
 
 from country_codes import get_country_code
 
 #Создаём карту
-wm = World()
-wm.title = 'World population'
+
 cc_populations = {}
 # Список заполняется данными.
 filename = 'json_data/population_data.json'
@@ -36,8 +36,9 @@ for cc, pop in cc_populations.items():
 # Проверка количества стран на каждом уровне.
 print(len(cc_pops_1), len(cc_pops_2), len(cc_pops_3))
 
-
-            
+wm_style = RotateStyle('#336699', base_style=LightColorizedStyle)
+wm = World(style=wm_style)
+wm.title = 'World population' 
 
 wm.add('0-10m', cc_pops_1)
 wm.add('10m-1bn', cc_pops_2)
